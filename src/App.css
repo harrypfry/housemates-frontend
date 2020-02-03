@@ -18,3 +18,28 @@
 .nav {
   background: blue;
 }
+
+.tour-page-header {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  margin: 0;
+  margin-top: 24px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tour-page-menu-item {
+  padding: 0 7px !important;
+}
+
+.tour-page-menu {
+  margin: 0 12px 0 0 !important;
+  /* height: 20px !important; */
+}
+
+.tour-page-menu-container {
+  /* height: 20px; */
+  margin-right: 12px;
+}

@@ -112,7 +112,6 @@ class Tours extends Component {
   };
 
   changeSortOrder = order => {
-    console.log("res => ", order);
     this.setState({ sortOrder: order, tourDataLoaded: false });
   };
 
@@ -149,7 +148,6 @@ class Tours extends Component {
         `http://triposo.com/api/20190906/tour.json?location_ids=Melbourne&order_by=${this.state.sortOrder}&offset=${this.state.currentOffset}&count=${this.state.resultsPerPage}&annotate=converted_price:AED&fields=intro,name,price,id,images,structured_content,booking_info,score&account=AZUHBLJH&token=luhn0k0fhlou5m4h52poe8c0fjpejzwt`
       )
       .then(({ data }) => {
-        console.log(data);
         this.setState({
           tourData: data.results,
           tourDataLoaded: true,
@@ -159,6 +157,7 @@ class Tours extends Component {
   };
 
   render() {
+    // console.log("no results => ", this.state.resultsPerPage);
     return (
       <div>
         {/* <div> */}
@@ -168,7 +167,7 @@ class Tours extends Component {
           changeResultsPerPage={this.changeResultsPerPage}
         />
         {this.state.tourDataLoaded ? (
-          this.state.tourData.map((tour, index) => {
+          this.state.tourData.map(tour => {
             return <TourCard data={tour} key={tour.id} />;
           })
         ) : (

@@ -164,6 +164,7 @@ class Tours extends Component {
       <div>
         <TourHeader
           searchFunction={this.searchFunction}
+
           changeSortOrder={this.changeSortOrder}
           activeSortOrder={this.state.sortOrder}
           changeResultsPerPage={this.changeResultsPerPage}
@@ -175,6 +176,7 @@ class Tours extends Component {
         ) : (
           <Loader active inline="centered" />
         )}
+
         <div className="offset-buttons">
           {this.state.tourDataLoaded && this.state.currentOffset !== 0 && (
             <Button

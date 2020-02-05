@@ -89,6 +89,7 @@ TOUR CARD
   margin-left: 10px !important;
 }
 
+
 .tour-card-item {
   background-color: #a0a0a04b;
   display: flex;
@@ -171,6 +172,7 @@ TOUR CARD
   margin-bottom: 10px !important;
 }
 
+
 /*=============
 REGISTER PORTAL
 =============*/
@@ -196,3 +198,4 @@ USER INFO PORTAL
 .user-avatar {
   height: 100px;
 }
+
